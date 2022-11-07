@@ -1,122 +1,66 @@
 @CHARSET "UTF-8";
 
 body {
-	overflow: hidden;
+	margin:0;
+	padding:0;
+	height:100%;
+	background-color:#F6F6F6;
 }
 
-* {
-	margin: 0;
-	font-family:"Microsoft Yahei";
-	color: #666;
+a{
+	text-decoration:none;
 }
 
-div{
-	margin: auto;
-	margin-bottom: 10px;
-	margin-top: 10px;
-	
+#left_list{float:left;}
+
+#right_list{float:right;}
+
+
+.index{
+	top:0;
+	/*background-color:#da9066;*/
 }
 
+
+
+.header_list{
+	display:inline-block;
+	top:0;
+}
+#container {
+	min-height:100%;
+	top:0;
+	/*position:relative;*/
+	/*background-color:black;*/
+}
 #header {
-	height: 82px;
-	width: 1200px;
+	padding:10px;
+	/*background-color:greenyellow;*/
+	top:0;
+	/*position:fixed;*/
+}
+#body {
+	padding:10px;
+	padding-bottom:60px;   /* Height of the footer */
+	/*background-color:red;*/
+}
+#footer {
+	/*position:absolute;*/
+	bottom:0;
+	width:100%;
+	height:60px;   /* Height of the footer */
+	/*background:#6cf;*/
+	position:fixed;
+	/*bottom:0;*/
 }
 
-#main {
-	height: 460px;
-	width: 1200px;
-	border: 1px black solid;
-	overflow: auto;
-}
-
-#bottom {
-	height: 30px;
-	width: 1200px;
-	text-align: center;
-}
-
-#book{
-	width: 100%;
-	height: 90%;
-	margin: auto;
-	
-}
-
-.b_list{
-	height:300px;
-	width:250px;
-	margin: 20px;
-	float: left;
-	margin-top:0px;
-	margin-bottom:0px;
-	border: 1px #e3e3e3 solid;
-}
-
-#page_nav{
-	width: 100%;
-	height: 10px;
-	margin: auto;
-	
-	text-align: center;
-}
-
-#pn_input {
-	width: 30px;
-	text-align: center;
-}
-
-.img_div{
-	height: 150px;
-	text-align: center;
-}
-
-.book_img {
-	height:150px;
-	width:150px;
-}
-
-.book_info {
-	
-	text-align: center;
-}
-
-.book_info div{
-	height: 10px;
-	width: 300px;
-	text-align: left;
-}
-
-.wel_word{
-	font-size: 60px;
-	float: left;
-}
-
-.logo_img{
-	float: left;
-}
-
-#header div a {
-	text-decoration: none;
-	font-size: 20px;
-}
-
-#header div{
-	float: right;
-	margin-top: 55px;
-}
-
-.book_cond{
-	margin-left: 500px;
-}
-
-.book_cond input{
-	width: 50px;
-	text-align: center;
+#button span{
+	position: fixed;
+	bottom: 0;
 }
 
 
-/*登录页面CSS样式  */
-
+/*登录*/
 #login_header{
 	height: 82px;
 	width: 1200px;
@@ -124,7 +68,7 @@ div{
 
 .login_banner{
 	height:475px;
-	background-color: #39987c;
+	background-color: #F6F6F6;
 }
 
 .login_form{
@@ -133,7 +77,15 @@ div{
 	float: right;
 	margin-right:50px;
 	margin-top: 50px;
-	background-color: #fff;
+	background-color: #F6F6F6;
+	left:35%;
+	top:25%;
+	position:absolute;
+
+	display:inline;
+	font-size:14px;
+	border-radius:10px;
+	border:1px solid #8dbaba;
 }
 
 #content {
@@ -145,6 +97,10 @@ div{
 	margin: 20px;
 	height: 260px;
 	width: 366px;
+	/*left:20%;*/
+	/*top:20%;*/
+	position:absolute;
+
 }
 
 h1 {
@@ -152,46 +108,54 @@ h1 {
 }
 .msg_cont{
 	background: none repeat scroll 0 0 #fff6d2;
-    border: 1px solid #ffe57d;
-    color: #666;
-    height: 18px;
-    line-height: 18px;
-    padding: 3px 10px 3px 40px;
-    position: relative;
-    border: none;
+	border: 1px solid #ffe57d;
+	color: #666;
+	height: 18px;
+	line-height: 18px;
+	padding: 3px 10px 3px 40px;
+	position: relative;
+	border: none;
 }
 
 .msg_cont b {
 	background: url("../img/pwd-icons-new.png") no-repeat scroll -104px -22px rgba(0, 0, 0, 0);
-    display: block;
-    height: 17px;
-    left: 10px;
-    margin-top: -8px;
-    overflow: hidden;
-    position: absolute;
-    top: 50%;
-    width: 16px;
+	display: block;
+	height: 17px;
+	left: 10px;
+	margin-top: -8px;
+	overflow: hidden;
+	position: absolute;
+	top: 50%;
+	width: 16px;
 }
 
 .form .itxt {
-    border: 0 none;
-    float: none;
-    font-family: "宋体";
-    font-size: 14px;
-    height: 18px;
-    line-height: 18px;
-    overflow: hidden;
-    padding: 10px 0 10px 10px;
-    width: 220px;
-    border: 1px #e3e3e3 solid;
+	border: 0 none;
+	float: none;
+	font-family: "宋体";
+	font-size: 14px;
+	height: 18px;
+	line-height: 18px;
+	overflow: hidden;
+	padding: 10px 0 10px 10px;
+	width: 220px;
+	border: 1px #e3e3e3 solid;
 }
 
 #sub_btn{
-	background-color: #39987c;
-	border: none;
+	background-color: #404859;
 	color: #fff;
 	width: 360px;
 	height: 40px;
+	display:inline;
+	font-size:14px;
+	border-radius:10px;
+	border:1px solid #f6f6f6;
+
+}
+
+.sub_btn{
+	buttom:10%;
 }
 
 #l_content {
@@ -228,50 +192,138 @@ h1 {
 .tit {
 	height: 30px;
 }
-/*购物车*/
-#main table{
-	margin: auto;
-	margin-top: 80px; 
-	border-collapse: collapse;
+
+/*搜索框*/
+
+.search{
+	width:500px;
+	height:40px;
+	border:2px solid black;
+	position:absolute;
+	right:35%;
+	top:45%;
+	/*outline:none;*/
+	text-indent:12px;
+	color:#666;
+	font-size:16px;
+	padding:0;
+	-webkit-transition:width 0.5s;
 }
 
-#main table td{
+.search_{
+	right:31.4%;
+	top:45%;
+	width:55px;
+	height:44px;
+	border:2px solid black;
+	position:absolute;
+}
+
+/*.search:focus {*/
+/*	width:400px;*/
+/*}*/
+
+/*-----------------*/
+.b_list{
+	height:300px;
+	width:250px;
+	margin: 20px;
+	float: left;
+	margin-top:0px;
+	margin-bottom:0px;
+	border: 1px #e3e3e3 solid;
+}
+
+/*#page_nav{*/
+/*	width: 100%;*/
+/*	height: 10px;*/
+/*	margin: auto;*/
+/*	text-align: center;*/
+/*	position:absolute;*/
+/*	top:75%;*/
+/*	left:30%;*/
+/*}*/
+
+#pn_input {
+	width: 30px;
+	text-align: center;
+}
+
+.img_div{
+	height: 150px;
+	text-align: center;
+}
+
+.book_img {
+	height:150px;
+	width:150px;
+}
+
+.book_info {
+
+	text-align: center;
+}
+
+.book_info div{
+	height: 10px;
+	width: 300px;
+	text-align: left;
+}
+
+.wel_word{
+	font-size: 60px;
+	float: left;
+}
+
+.logo_img{
+	float: left;
+}
+
+/*bookList*/
+#main table {
+	width: 120px;
+	text-align:center;
+	border-bottom: 1px #e3e3e3 solid;
+	padding: 10px;
+	top:17%;
+	left:20%;
+	position:absolute;
+	white-space: nowrap;
+}
+
+#main_edit table {
+	/*height:100px;*/
+	width: 120px;
+	text-align:center;
+	border-bottom: 1px #e3e3e3 solid;
+	padding: 10px;
+	position:absolute;
+	top:40%;
+	left:11%;
+}
+
+#main_edit table td{
+	/*height:100px;*/
+	height: 20px;
+}
+
+
+#main table td {
+	height:40px;
 	width: 120px;
 	text-align:center;
 	border-bottom: 1px #e3e3e3 solid;
 	padding: 10px;
 }
 
-.cart_info{
-	width: 700px;
-	text-align: right;
-}
 
-.cart_span {
-	margin-left: 20px;
-}
 
-.cart_span span{
-	color: red;
-	font-size: 20px;
-	margin: 10px;
-}
 
-.cart_span a , td a{
-	font-size: 20px;
-	color: blue;
-}
 
-#header div span {
-	margin: 10px;
-}
-
-#header div .um_span{
-	color: red;
-	font-size: 25px;
-	margin: 10px;
-}
-
-#header div a {
-	color: blue;
+/*book_info*/
+.book_info table td{
+	width: 120px;
+	text-align:center;
+	border-bottom: 1px #e3e3e3 solid;
+	padding: 10px;
 }

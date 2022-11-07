@@ -7,7 +7,8 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div id="bottom">
-			<span>
+			<span style="text-align: center;display:block">
+				<br>
 				iBooks 图书管理系统.Copyright &copy;2022
 			</span>
 </div>

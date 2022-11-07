@@ -1,0 +1,142 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: url(/static/img/pink.jpg) no-repeat;
+    background-size: 100%;
+}
+
+.login {
+    width: 300px;
+    height: 80px;
+    margin: 50px auto;
+}
+
+.login p {
+    text-align: center;
+    font-size: 50px;
+    color: #e499bf;
+}
+
+.main {
+    width: 450px;
+    height: 470px;
+    background-color: #fff;
+    opacity: 0.6;
+    border-radius: 20px;
+    margin: 20px auto;
+}
+
+.main .top {
+    width: 400px;
+    height: 60px;
+}
+
+.top ul li {
+    float: left;
+    list-style: none;
+    font-weight: 700;
+    width: 90px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin-left: 20px;
+    border-bottom: 3px solid #0066ff;
+}
+
+.top ul li:first-child {
+    border-bottom: none;
+    margin-top: -1px;
+    font-weight: 500;
+}
+
+.top ul li a {
+    font-size: 17px;
+    color: #000;
+    text-decoration: none;
+}
+
+.main .box {
+    position: relative;
+    width: 410px;
+    height: 160px;
+    margin-left: 20px;
+}
+
+.box input {
+    width: 410px;
+    height: 40px;
+    margin-top: 20px;
+    border-left: none;
+    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid #999;
+    outline: none;
+}
+
+.box span {
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    font-size: 14px;
+    color: #043784;
+}
+
+.box a {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    font-size: 14px;
+    color: #000;
+    text-decoration: none;
+}
+
+.main .but {
+    width: 410px;
+    height: 40px;
+    background-color: #0066ff;
+    margin-left: 20px;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+
+.main .nav {
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 410px;
+    height: 60px;
+    line-height: 60px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav p {
+    font-size: 14px;
+    color: #000;
+}
+
+.main .last {
+    width: 410px;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 20px;
+}
+
+.last p {
+    float: left;
+    font-size: 16px;
+    color: #333;
+}
+
+.last button {
+    float: right;
+    border: none;
+    background-color: #fff;
+    text-align: center;
+    height: 40px;
+    padding-left: 10px;
+    margin-top: 10px;
+}

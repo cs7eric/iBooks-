@@ -24,44 +24,53 @@
 </style>
 </head>
 <body>
-		<div id="header">
-			<img class="logo_img" alt="" src="../../static/img/logo.gif" >
-			<span class="wel_word">编辑图书</span>
+<div id="container">
+	<div id="header">
 
+		<%-- 静态包含 header页面--%>
+		<%@ include file="/pages/common/header.jsp"%>
+	</div>
+	<div id="body">
 
-			<%--		静态包含 manager_menu 页面--%>
-			<%@ include file="/pages/common/manager_menu.jsp" %>
-
-		</div>
-		
-		<div id="main">
+		<div id="main_edit">
 			<form action="manager/bookServlet" method="get">
-				<input type="hidden" name="action"  value="${empty param.id ? "add" : "update"}"/>
+				<input type="hidden" name="action"  value="${empty requestScope.book.id ? "add" : "update"}"/>
 				<input type="hidden" name="id" value="${requestScope.book.id}"/>
 				<table>
 					<tr>
+						<td>ISBN</td>
 						<td>名称</td>
-						<td>价格</td>
 						<td>作者</td>
-						<td>销量</td>
+						<td>价格</td>
 						<td>库存</td>
+						<td>简介</td>
 						<td colspan="2">操作</td>
-					</tr>		
+					</tr>
 					<tr>
+						<td><input name="ISBN" type="text" value="${requestScope.book.ISBN}"/></td>
 						<td><input name="name" type="text" value="${requestScope.book.name}"/></td>
-						<td><input name="price" type="text" value="${requestScope.book.price}"/></td>
 						<td><input name="author" type="text" value="${requestScope.book.author}"/></td>
-						<td><input name="sales" type="text" value="${requestScope.book.sales}"/></td>
+						<td><input name="price" type="text" value="${requestScope.book.price}"/></td>
 						<td><input name="stock" type="text" value="${requestScope.book.stock}"/></td>
+						<td><input name="intro" type="text" value="${requestScope.book.intro}"></td>
 						<td><input type="submit" value="提交"/></td>
-					</tr>	
+					</tr>
 				</table>
 			</form>
-			
-	
+
+
 		</div>
 
-		<%--静态包含 foot 页面--%>
-		<%@ include file="/pages/common/foot.jsp" %>
+
+	</div>
+	<div id="footer">
+		<%--	静态包含foot页面--%>
+		<%@ include file="/pages/common/foot.jsp"%>
+	</div>
+</div>
+		
+
+
+
 </body>
 </html>

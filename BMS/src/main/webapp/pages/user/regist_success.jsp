@@ -11,7 +11,8 @@
 <style type="text/css">
 	h1 {
 		text-align: center;
-		margin-top: 200px;
+		margin-top: 300px;
+		font-size:30px;
 	}
 	
 	h1 a {
@@ -20,25 +21,20 @@
 </style>
 </head>
 <body>
+	<div id="container">
 		<div id="header">
-				<img class="logo_img" alt="" src="static/img/logo.gif" >
-				<span class="wel_word"></span>
-
-
-				<%--		静态包含 login_success_menu 页面--%>
-				<%@ include file="/pages/common/login_success_menu.jsp"%>
-
+			<%-- 静态包含 header页面--%>
+			<%@ include file="/pages/common/header.jsp"%>
 		</div>
-		
-		<div id="main">
-		
-			<h1>注册成功! <a href="../../index.jsp">转到主页</a></h1>
-	
+		<div id="body">
+			<div id="main">
+				<h1>注册成功! <a href="index.jsp">转到主页</a></h1>
+			</div>
 		</div>
-
-		<%--	静态包含foot页面--%>
-		<%@ include file="/pages/common/foot.jsp"%>
-
-
+		<div id="footer">
+			<%--	静态包含foot页面--%>
+			<%@ include file="/pages/common/foot.jsp"%>
+		</div>
+	</div>
 </body>
 </html>

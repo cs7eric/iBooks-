@@ -23,7 +23,9 @@
             <a href="manager/bookServlet?action=page&pageNo=${requestScope.page.pageNo+1}">下一页</a>
             <a href="manager/bookServlet?action=page&pageNo=${requestScope.page.pageTotal}">末页</a>
         </c:if>
-    共 ${requestScope.page.pageTotal}页，${requestScope.page.pageTotalCount} 条记录 到第<input value="4" name="pn" id="pn_input"/>页
-    <input type="button" value="确定">
+    共 ${requestScope.page.pageTotal}页，${requestScope.page.pageTotalCount} 条记录 到 第  <input value="${param.pageNo}"  name="pn" id="pn_input"/>  页
+        <a href="manager/bookServlet?action=page&pageNo=${requestScope.page.pageNo}">
+            <input type="button" value="确定" >
+        </a>
 </div>
 <%--分页条的结束--%>

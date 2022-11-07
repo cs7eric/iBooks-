@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>登录页面</title>
+<title>登录</title>
 
 	<%--	静态包含 base 标签，css样式、jQuery 文件--%>
 	<%@ include file="/pages/common/head.jsp" %>
@@ -15,21 +15,20 @@
 	</style>
 </head>
 <body>
-		<div id="login_header">
-			<img class="logo_img" alt="" src="static/img/logoibooks.gif" >
+
+	<div id="container">
+		<div id="header">
+
+			<%-- 静态包含 header页面--%>
+			<%@ include file="/pages/common/header.jsp"%>
 		</div>
-		
+		<div id="body">
 			<div class="login_banner">
-			
-				<div id="l_content">
-					<span class="login_word">欢迎登录</span>
-				</div>
-				
 				<div id="content">
 					<div class="login_form">
 						<div class="login_box">
 							<div class="tit">
-								<h1>会员</h1>
+								<h1>管理员登录</h1>
 								<a href="pages/user/regist.jsp">立即注册</a>
 							</div>
 							<div class="msg_cont">
@@ -43,24 +42,28 @@
 									<input type="hidden" name="action" value="login" />
 									<label>用户名称：</label>
 									<input class="itxt" type="text" placeholder="请输入用户名"
-										       autocomplete="off" tabindex="1" name="username"
-											   value="${requestScope.username}"/>
+										   autocomplete="off" tabindex="1" name="username"
+										   value="${requestScope.username}"/>
 									<br />
 									<br />
 									<label>用户密码：</label>
 									<input class="itxt" type="password" placeholder="请输入密码" autocomplete="off" tabindex="1" name="password" />
 									<br />
 									<br />
-									<input type="submit" value="登录" id="sub_btn" />
+									<div class="sub_btn">
+										<input type="submit" value="登录" id="sub_btn" />
+									</div>
 								</form>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-		<%--	静态包含foot页面--%>
-		<%@ include file="/pages/common/foot.jsp"%>
-
+		</div>
+		<div id="footer">
+			<%--	静态包含foot页面--%>
+			<%@ include file="/pages/common/foot.jsp"%>
+		</div>
+	</div>
 </body>
 </html>
