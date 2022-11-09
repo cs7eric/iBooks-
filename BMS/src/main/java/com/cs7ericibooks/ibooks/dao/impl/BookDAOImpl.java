@@ -21,8 +21,8 @@ public class BookDAOImpl extends BaseDAO implements BookDAO {
 
     @Override
     public int updateBook(Book book) {
-        String sql = "update t_book set `ISBN`=?, `name`=?,`author`=?,`price`=?,`stock`=?,`img_path`=?,`intro`=? where id = ?";
-        return update(sql,book.getISBN(),book.getName(),book.getAuthor(),book.getPrice(),book.getStock(),book.getImgPath(),book.getIntro(),book.getId());
+        String sql = "update t_book set `ISBN`=?, `name`=?,`author`=?,`price`=?,`stock`=?,`intro`=? where id = ?";
+        return update(sql,book.getISBN(),book.getName(),book.getAuthor(),book.getPrice(),book.getStock(),book.getIntro(),book.getId());
     }
 
     @Override
@@ -54,5 +54,11 @@ public class BookDAOImpl extends BaseDAO implements BookDAO {
     public Book queryByISBN(String ISBN) {
         String sql = "select `id` , `ISBN`, `name` , `author` , `price` , `stock` , `img_path` imgPath , `intro` from t_book where ISBN =?";
         return queryForOne(Book.class,sql,ISBN);
+    }
+
+    @Override
+    public List<Book> queryForRecommend(int pageSize) {
+        String sql = "select `id` , `ISBN`, `name` , `author` , `price` , `stock` , `img_path` imgPath , `intro` from t_book limit 0,?";
+        return queryForList(Book.class,sql,pageSize);
     }
 }

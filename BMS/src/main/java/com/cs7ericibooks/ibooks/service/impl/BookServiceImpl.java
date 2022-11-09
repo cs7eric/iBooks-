@@ -78,4 +78,9 @@ public class BookServiceImpl implements BookService {
     public Book queryByISBN(String ISBN) {
         return bookDAO.queryByISBN(ISBN);
     }
+
+    @Override
+    public List<Book> queryForRecommend(int pageSize) {
+        return bookDAO.queryForRecommend(pageSize);
+    }
 }

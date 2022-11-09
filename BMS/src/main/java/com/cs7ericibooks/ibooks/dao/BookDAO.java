@@ -47,4 +47,6 @@ public interface BookDAO {
     public List<Book> queryForPageItems(int begin,int pageSize);
 
     Book queryByISBN(String ISBN);
+
+    List<Book> queryForRecommend(int pageSize);
 }

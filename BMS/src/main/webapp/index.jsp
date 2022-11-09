@@ -28,7 +28,7 @@
           <label>
             <input type="text" class="search" placeholder="输入 ISBN码 进行搜索"
                    autocomplete="off" tabindex="1" name="ISBN"
-                   value="${requestScope.SN}">
+                   value="">
           </label>
           <input type="submit" class="search_" value="搜索" >
         </form>

@@ -1,0 +1,1 @@
+<jsp:forward page="/pages/client/index.jsp"></jsp:forward>

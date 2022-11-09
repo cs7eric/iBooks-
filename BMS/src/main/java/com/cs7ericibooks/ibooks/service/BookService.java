@@ -21,4 +21,6 @@ public interface BookService {
     public Page<Book> page(int pageNo, int pageSize);
 
     Book queryByISBN(String ISBN);
+
+    List<Book> queryForRecommend(int pageSize);
 }

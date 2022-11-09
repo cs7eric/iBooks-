@@ -95,8 +95,11 @@ public class BookServlet extends BaseServlet{
         Book book = bookService.queryByISBN(ISBN);
         //把 book 保存到 request 域中
         request.setAttribute("bookInfo",book);
+        int pageSize = WebUtils.parseInt(request.getParameter("pageSize"), 4);
+        List<Book> bookList = bookService.queryForRecommend(pageSize);
+        request.setAttribute("bookList",bookList);
         //请求转发
-        request.getRequestDispatcher("/pages/manager/book_info.jsp").forward(request,response);
+        request.getRequestDispatcher("/pages/manager/book_info_new.jsp").forward(request,response);
     }
 
     protected void index(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -107,5 +110,13 @@ public class BookServlet extends BaseServlet{
 
         //请求转发到 index.jsp
         request.getRequestDispatcher("/index.jsp").forward(request,response);
+    }
+
+    protected void recommend(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        int pageSize = WebUtils.parseInt(request.getParameter("pageSize"), 4);
+        List<Book> bookList = bookService.queryForRecommend(pageSize);
+        request.setAttribute("bookList",bookList);
+        request.getRequestDispatcher("/pages/manager/book_info_new.jsp").forward(request,response);
     }
 }

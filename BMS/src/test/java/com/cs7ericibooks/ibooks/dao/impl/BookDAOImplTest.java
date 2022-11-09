@@ -20,7 +20,7 @@ public class BookDAOImplTest {
 
     @Test
     public void deleteBookById() {
-        bookDAO.deleteBookById(6);
+        bookDAO.deleteBookById(90);
     }
 
     @Test

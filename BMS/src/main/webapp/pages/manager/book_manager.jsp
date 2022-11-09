@@ -47,6 +47,8 @@
 					<c:forEach items="${requestScope.page.items}" var="book">
 						<tr>
 							<td>${book.ISBN}</td>
+
+<%--							--%>
 							<td>${book.name}</td>
 							<td>${book.author}</td>
 							<td>${book.price}</td>
