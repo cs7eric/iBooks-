@@ -34,7 +34,7 @@
 							<div class="msg_cont">
 								<b></b>
 								<span class="errorMsg" color>
-									${empty requestScope.msg? "请输入用户名与密码" : requestScope.msg}
+									${requestScope.msg}
 								</span>
 							</div>
 							<div class="form">

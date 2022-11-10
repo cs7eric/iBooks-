@@ -5,16 +5,24 @@
          version="4.0">
     <servlet>
         <servlet-name>UserServlet</servlet-name>
-        <servlet-class>com.cs7ericibooks.ibooks.web.UserServlet</servlet-class>
+        <servlet-class>com.cs7eric.ibooks.web.UserServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>BaseServlet</servlet-name>
-        <servlet-class>com.cs7ericibooks.ibooks.web.BaseServlet</servlet-class>
+        <servlet-class>com.cs7eric.ibooks.web.BaseServlet</servlet-class>
     </servlet>
     <servlet>
         <servlet-name>BookServlet</servlet-name>
-        <servlet-class>com.cs7ericibooks.ibooks.web.BookServlet</servlet-class>
+        <servlet-class>com.cs7eric.ibooks.web.BookServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ClientBookServlet</servlet-name>
+        <servlet-class>com.cs7eric.ibooks.web.ClientBookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ClientBookServlet</servlet-name>
+        <url-pattern>/client/bookServlet</url-pattern>
+    </servlet-mapping>
 
     <servlet-mapping>
         <servlet-name>BookServlet</servlet-name>

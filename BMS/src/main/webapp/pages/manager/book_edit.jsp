@@ -21,6 +21,26 @@
 	input {
 		text-align: center;
 	}
+
+	#main table{
+		margin: auto;
+		margin-top: 80px;
+		border-collapse: collapse;
+		color:#f6f6f6;
+	}
+
+	#main table td{
+		width: 120px;
+		text-align:center;
+		padding: 10px;
+	}
+
+	#main_edit {
+
+		position: absolute;
+		top:40%;
+		left:20%;
+	}
 </style>
 </head>
 <body>
@@ -28,7 +48,7 @@
 	<div id="header">
 
 		<%-- 静态包含 header页面--%>
-		<%@ include file="/pages/common/header.jsp"%>
+		<%@ include file="/pages/common/header_new.jsp"%>
 	</div>
 	<div id="body">
 
@@ -65,7 +85,7 @@
 	</div>
 	<div id="footer">
 		<%--	静态包含foot页面--%>
-		<%@ include file="/pages/common/foot.jsp"%>
+<%--		<%@ include file="/pages/common/foot.jsp"%>--%>
 	</div>
 </div>
 		

@@ -24,13 +24,33 @@
 			top:80%;
 			left:35%;
 		}
+
+		#main table{
+			margin: auto;
+			margin-top: 80px;
+			border-collapse: collapse;
+			color:#f6f6f6;
+		}
+
+		#main table td{
+			width: 120px;
+			text-align:center;
+			padding: 10px;
+		}
+
+		#main {
+
+			position: absolute;
+			top:40%;
+			left:20%;
+		}
 	</style>
 </head>
 <body>
 	<div id="container">
 		<div id="header">
 			<%-- 静态包含 header页面--%>
-			<%@ include file="/pages/common/header.jsp"%>
+			<%@ include file="/pages/common/header_new.jsp"%>
 		</div>
 		<div id="body">
 			<div id="main">
@@ -53,7 +73,7 @@
 							<td>${book.author}</td>
 							<td>${book.price}</td>
 							<td>${book.stock}</td>
-							<td>${book.intro}</td>
+							<td><a href="manager/bookServlet?action=briefIntro&id=${book.id}">详情</a></td>
 							<td><a href="manager/bookServlet?action=getBook&id=${book.id}">修改</a></td>
 							<td><a class="deleteClass" href="manager/bookServlet?action=delete&id=${book.id}">删除</a></td>
 						</tr>
@@ -74,7 +94,7 @@
 			</div>
 			<div id="footer">
 				<%--	静态包含foot页面--%>
-				<%@ include file="/pages/common/foot.jsp"%>
+<%--				<%@ include file="/pages/common/foot.jsp"%>--%>
 			</div>
 		</div>
 	</div>
