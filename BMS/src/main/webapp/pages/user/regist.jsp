@@ -17,6 +17,14 @@
 		// 页面加载完成之后
 		$(function() {
 
+
+			//给验证码图片绑定单击事件
+			$("#code_img").click(function() {
+				this.src = "${basePath}kaptcha.jpg?d=" + new Date();
+			});
+
+
+
 			// 给注册绑定单击事件
 			$("#sub_btn").click(function() {
 
@@ -135,7 +143,7 @@
 								<br />
 								<label>验证码：</label>
 								<input class="itxt" type="text" name="code" style="width: 150px;" id="code"/>
-								<img alt="" src="static/img/code.bmp" style="float: right; margin-right: 40px">
+								<img id="code_img" alt="" src="kaptcha.jpg" style="width:100px;height:28px;">
 								<br />
 								<br />
 								<input type="submit" value="注册" id="sub_btn" />

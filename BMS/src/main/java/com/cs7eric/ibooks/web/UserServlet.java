@@ -9,6 +9,8 @@ import javax.servlet.http.*;
 import java.io.IOException;
 import java.lang.reflect.Method;
 
+import static com.google.code.kaptcha.Constants.KAPTCHA_SESSION_KEY;
+
 public class UserServlet extends BaseServlet {
 
     private UserService userService = new UserServiceImpl();
@@ -63,6 +65,13 @@ public class UserServlet extends BaseServlet {
      * @param response
      */
     protected void regist(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+        //获取验证码 token
+        String token = (String)request.getSession().getAttribute(KAPTCHA_SESSION_KEY);
+        //删除 Session 中的验证码
+        request.getSession().removeAttribute(KAPTCHA_SESSION_KEY);
+
+
         //1. 获取请求的参数
         String username = request.getParameter("username");
         String password = request.getParameter("password");
@@ -70,8 +79,8 @@ public class UserServlet extends BaseServlet {
         String code = request.getParameter("code");
 //        User user = WebUtils.copyParamToBean(request.getParameterMap(), new User());
 
-        //2. 检查验证码是否正确  写死--要求验证码为  abcde
-        if("abcde".equalsIgnoreCase(code)){
+        //2. Google 验证码验证  Kaptcha
+        if(token != null && token.equalsIgnoreCase(code)){
             //正确
             //3.检查用户名是否可用
             if(userService.existsUsername(username)){
@@ -87,7 +96,7 @@ public class UserServlet extends BaseServlet {
                 //调用 Service 保存到数据库
                 userService.register(new User(null,username,password,email));
                 //跳转注册成功页面 regist_success.jsp
-                request.getRequestDispatcher("/pages/user/regist_success.jsp").forward(request,response);
+                request.getRequestDispatcher(request.getContextPath()).forward(request,response);
             }
         } else {
             //错误
