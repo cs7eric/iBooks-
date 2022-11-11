@@ -25,25 +25,7 @@
 			left:35%;
 		}
 
-		#main table{
-			margin: auto;
-			margin-top: 80px;
-			border-collapse: collapse;
-			color:#f6f6f6;
-		}
 
-		#main table td{
-			width: 120px;
-			text-align:center;
-			padding: 10px;
-		}
-
-		#main {
-
-			position: absolute;
-			top:40%;
-			left:20%;
-		}
 	</style>
 </head>
 <body>
@@ -54,7 +36,7 @@
 		</div>
 		<div id="body">
 			<div id="main">
-				<table>
+				<table class="book_manager_table">
 					<tr>
 						<td>ISBN</td>
 						<td>名称</td>
@@ -79,6 +61,7 @@
 						</tr>
 					</c:forEach>
 					<tr>
+						<td></td>
 						<td></td>
 						<td></td>
 						<td></td>

@@ -4,19 +4,15 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>会员注册页面</title>
-	<!-- 写 base 标签 永远固定相对路径-->
-
+<title>注册页面</title>
 
 	<%--	静态包含 base 标签，css样式、jQuery 文件--%>
 	<%@ include file="/pages/common/head.jsp" %>
-
 
 	<script type="text/javascript">
 
 		// 页面加载完成之后
 		$(function() {
-
 
 			//给验证码图片绑定单击事件
 			$("#code_img").click(function() {

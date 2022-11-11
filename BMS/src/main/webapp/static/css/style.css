@@ -149,7 +149,6 @@ body {
 	border-top: 1px solid #333333;
 	border-bottom: 1px solid #333333;
 
-
 }
 
 .main div img {
@@ -339,3 +338,136 @@ body {
 .list_left input::placeholder {
 	color: #c1c2c2;
 }
+
+#login_body {
+	z-index: 999;
+	position: absolute;
+	top: 50%;
+	margin-top: -250px;
+	left: 50%;
+	margin-left: -250px;
+	width: 500px;
+	height: 500px;
+}
+
+#regist_body {
+	z-index: 999;
+	position: absolute;
+	top: 50%;
+	margin-top: -250px;
+	left: 50%;
+	margin-left: -250px;
+	width: 500px;
+	height: 500px;
+}
+
+.tit {
+	width: 500px;
+	height: 70px;
+
+}
+
+.tit h1 {
+	font-size: 36px;
+	font-family: '宋体';
+	width: 500px;
+	text-align: center;
+	color: #fff;
+}
+
+.tit .msg {
+	color: red;
+	font-size: 16px;
+	display: block;
+	text-align: center;
+	margin-top: 3px;
+}
+
+
+.form table input {
+	background: url(0) no-repeat;
+	outline: none;
+	border: 1px solid rgb(122, 153, 226);
+	width: 360px;
+	margin-left: 70px;
+	margin-top: 10px;
+	height: 40px;
+	padding-left: 20px;
+	color: #fbfbfb;
+	font-size: 16px;
+}
+
+.form table input::placeholder {
+	font-size: 14px;
+	color: #dfdcdc;
+}
+
+
+
+.form table img {
+	float: right;
+	margin-right: 80px;
+	margin-top: 10px;
+	width: 100px;
+	height: 40px;
+}
+
+#sub_btn {
+	width: 80px;
+	height: 40px;
+	padding-left: 0;
+	border-radius:9px;
+}
+
+.itxt {
+	border-radius: 9px;
+}
+.password {
+	border-radius:9px;
+}
+
+
+/*book_manager_table*/
+.book_manager_table {
+	width: 1200px;
+	height: 300px;
+	border: 0;
+	margin: 0 auto;
+	margin-top: 50px;
+	position: absolute;
+	top:25%;
+	left:20%;
+	color:#ffffff;
+}
+
+.book_manager_table th {
+	background-color: #00A5FF;
+	color: #FFFFFF;
+}
+
+.book_manager_table,
+.book_manager_table th,
+.book_manager_table td {
+	font-size: 16px;
+	text-align: center;
+	padding: 4px;
+	border-collapse: collapse;
+}
+
+.book_manager_table th,
+.book_manager_table td {
+	border: 1px solid #2087fe;
+	border-width: 1px 0 1px 0;
+	border: 2px inset #ffffff;
+	width: 200px;
+}
+
+.book_manager_table tr {
+	background-color: #1e1f22;
+	border: 1px solid #ffffff;
+}
+
+.book_manager_table tr:hover {
+	background-color: #dddddd;
+}
+

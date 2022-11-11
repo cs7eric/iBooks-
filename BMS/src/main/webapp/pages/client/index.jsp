@@ -29,16 +29,13 @@
                        autocomplete="off" tabindex="1" name="ISBN"
                        value="">
             </div>
+
         </form>
-
-
-
-
-            </form>
-
-
-
     </div>
+
+
+
+
     <div id="footer">
         <%--	静态包含foot页面--%>
 <%--        <%@ include file="/pages/common/foot.jsp"%>--%>

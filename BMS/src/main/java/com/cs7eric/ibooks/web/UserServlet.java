@@ -90,14 +90,17 @@ public class UserServlet extends BaseServlet {
                 request.setAttribute("msg","用户名  " + username + " 不可用");
                 request.setAttribute("username",username);
                 //跳回注册页面
-                request.getRequestDispatcher("/pages/user/regist.jsp").forward(request,response);
+                request.getRequestDispatcher("pages/user/regist_new.jsp").forward(request,response);
             } else {
                 //可用
                 //调用 Service 保存到数据库
                 userService.register(new User(null,username,password,email));
-                //跳转注册成功页面 regist_success.jsp
-                request.getRequestDispatcher(request.getContextPath()).forward(request,response);
+
+                //跳转首页
+                request.getRequestDispatcher("index.jsp").forward(request,response);
             }
+
+
         } else {
             //错误
             //跳回注册页面
@@ -109,6 +112,13 @@ public class UserServlet extends BaseServlet {
         }
     }
 
+
+    /**
+     *  注销功能
+     * @param request
+     * @param response
+     * @throws IOException
+     */
     protected void logout(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         //销毁 Session 中用户登录的信息或者销毁 Session
@@ -116,4 +126,5 @@ public class UserServlet extends BaseServlet {
         //重定向 回首页
         response.sendRedirect(request.getContextPath());
     }
+
 }

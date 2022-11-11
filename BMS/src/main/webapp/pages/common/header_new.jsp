@@ -63,11 +63,11 @@
 
                     <li>
                         <!-- 登录 -->
-                        <a href="userServlet?action=login" class="has_children">登录</a>|
+                        <a href="pages/user/login.jsp" class="has_children">登录</a>|
                     </li>
                     <li>
                         <!-- 注册 -->
-                        <a href="userServlet?action=regist" class="has_children">注册</a>|
+                        <a href="pages/user/regist_new.jsp" class="has_children">注册</a>|
                     </li>
                 </c:if>
                 <c:if test="${ not empty sessionScope.user}">
