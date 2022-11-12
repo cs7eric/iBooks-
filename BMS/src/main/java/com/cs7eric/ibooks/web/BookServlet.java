@@ -81,10 +81,13 @@ public class BookServlet extends BaseServlet{
 
         //调用 BookService.page(pageNo,pageSize) :Page 对象
         Page<Book> page = bookService.page(pageNo, pageSize);
+
+        page.setUrl("manager/bookServlet?action=page");
+
         //保存 Page 对象到 Request 域中
         request.setAttribute("page",page);
         //请求转发到 /pages/manager/book_manager.jsp 页面
-        request.getRequestDispatcher( "/pages/manager/book_manager.jsp").forward(request,response);
+        request.getRequestDispatcher( "/pages/manager/book_manager_new.jsp").forward(request,response);
     }
 
     protected void info (HttpServletRequest request,HttpServletResponse response) throws ServletException, IOException {

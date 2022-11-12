@@ -51,10 +51,7 @@
 
 
         </div>
-        <div id="footer">
-            <!-- <%-- 静态包含foot页面--%> -->
-            <!-- <%@ include file="/pages/common/foot.jsp" %> -->
-        </div>
+        
     </div>
 </body>
 

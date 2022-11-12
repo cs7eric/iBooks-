@@ -67,10 +67,6 @@
 				</div>
 			</div>
 		</div>
-		<div id="footer">
-			<%--	静态包含foot页面--%>
-			<%@ include file="/pages/common/foot.jsp"%>
-		</div>
 		<canvas id="canvas"></canvas>
 		<script>
 			//宇宙特效

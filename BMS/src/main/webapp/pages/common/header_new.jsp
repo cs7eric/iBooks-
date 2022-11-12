@@ -30,7 +30,7 @@
 
 <body>
 
-    <div class="header_list">
+    <div class="header_list" style="background-color: #17181a; width: 100%;">
         <div>
             <c:if test="${empty requestScope.isIndex}">
                 <a href="index.jsp">
@@ -75,10 +75,7 @@
                         <a href="userServlet?action=logout" class="has_children">注销</a>
                     </li>
                 </c:if>
-                <li>
-                    <!-- donate -->
-                    <a href="pages/client/donate.jsp" class="has_children">Donate</a>
-                </li>
+
                 <c:if test="${not empty sessionScope.user}">
 
                     <li class="nav_menu_li">

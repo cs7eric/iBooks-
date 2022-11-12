@@ -73,6 +73,8 @@
 						<td><input name="price" type="text" value="${requestScope.book.price}"/></td>
 						<td><input name="stock" type="text" value="${requestScope.book.stock}"/></td>
 						<td><input name="intro" type="text" value="${requestScope.book.intro}"></td>
+						<td><input name="imgPath" type="text" value="${requestScope.book.imgPath}"></td>
+
 						<td><input type="submit" value="提交"/></td>
 					</tr>
 				</table>

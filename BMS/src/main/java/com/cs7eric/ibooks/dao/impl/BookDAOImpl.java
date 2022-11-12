@@ -21,8 +21,8 @@ public class BookDAOImpl extends BaseDAO implements BookDAO {
 
     @Override
     public int updateBook(Book book) {
-        String sql = "update t_book set `ISBN`=?, `name`=?,`author`=?,`price`=?,`stock`=?,`intro`=? where id = ?";
-        return update(sql,book.getISBN(),book.getName(),book.getAuthor(),book.getPrice(),book.getStock(),book.getIntro(),book.getId());
+        String sql = "update t_book set `ISBN`=?, `name`=?,`author`=?,`price`=?,`stock`=?,`intro`=? `img_path`=? where id = ?";
+        return update(sql,book.getISBN(),book.getName(),book.getAuthor(),book.getPrice(),book.getStock(),book.getIntro(),book.getImgPath(),book.getId());
     }
 
     @Override
