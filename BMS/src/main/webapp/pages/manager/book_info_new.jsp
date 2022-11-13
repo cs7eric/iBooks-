@@ -43,11 +43,25 @@
                 <a href="manager/bookServlet?action=getBook&id=${requestScope.bookInfo.id}">修改图书</a>
             </div>
         </div>
+        <div style="height:20px;"></div>
         <div class="main">
+
+            <p>图书推荐</p>
+            <c:forEach items="${requestScope.bookList}" var="book">
+                <div>
+                    <img src="${book.imgPath}" alt="">
+                    <p>
+                        <a href="manager/bookServlet?action=info&ISBN=${book.ISBN}">
+                                ${book.name}
+                        </a>
+                    </p>
+                    <span>${book.author}</span>
+                </div>
+            </c:forEach>
 
             <!-- 图书推荐 -->
             <%-- 静态包含 book_recommend 页面--%>
-            <%@ include file="/pages/manager/book_recommend.jsp"%>
+<%--            <%@ include file="/pages/manager/book_recommend.jsp"%>--%>
 
 
         </div>

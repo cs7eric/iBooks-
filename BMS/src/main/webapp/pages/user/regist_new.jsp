@@ -163,11 +163,6 @@
             border-radius:9px;
         }
 
-        .login_banner {
-            border-radius: 40px;
-            color: #fff;
-            height:430px;
-        }
 
         .itxt {
             border-radius: 9px;

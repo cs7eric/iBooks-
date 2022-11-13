@@ -8,15 +8,15 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!-- 图书推荐 -->
-<p>图书推荐</p>
-<c:forEach items="${requestScope.bookList}" var="book">
-    <div>
-        <img src="${book.imgPath}" alt="">
-        <p>
-            <a href="manager/bookServlet?action=info&ISBN=${book.ISBN}">
-                    ${book.name}
-            </a>
-        </p>
-        <span>${book.author}</span>
-    </div>
-</c:forEach>
+<%--<p>图书推荐</p>--%>
+<%--<c:forEach items="${requestScope.bookList}" var="book">--%>
+<%--    <div>--%>
+<%--        <img src="${book.imgPath}" alt="">--%>
+<%--        <p>--%>
+<%--            <a href="manager/bookServlet?action=info&ISBN=${book.ISBN}">--%>
+<%--                    ${book.name}--%>
+<%--            </a>--%>
+<%--        </p>--%>
+<%--        <span>${book.author}</span>--%>
+<%--    </div>--%>
+<%--</c:forEach>--%>

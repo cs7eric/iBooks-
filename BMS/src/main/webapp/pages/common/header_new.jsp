@@ -93,6 +93,10 @@
                                 <a href="manager/bookServlet?action=page">图书管理</a>
                             </li>
                             <li>
+                                    <%-- 按价格排序--%>
+                                <a href="manager/bookServlet?action=pageByPrice">价格排序</a>
+                            </li>
+                            <li>
                                 <!-- 添加图书 -->
                                 <a href="/iBooks/pages/manager/book_edit.jsp">添加图书</a>
                             </li>
@@ -100,6 +104,7 @@
                                 <!-- 联系我们 -->
                                 <a href="javascript:;">联系我们</a>
                             </li>
+
                         </ul>
                     </li>
                 </c:if>

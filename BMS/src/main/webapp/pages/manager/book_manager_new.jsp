@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="static/assets_book_manager/css/Ludens---1-Dark-mode-Index-Table-with-Search-Filters.css">
     <link rel="stylesheet" href="static/assets_book_manager/css/Navbar-Right-Links-icons.css">
 
+    <script type="text/javascript" src="static/script/jquery-1.7.2.js"></script>
+
     <script type="text/javascript">
         $(function(){
 
@@ -69,9 +71,9 @@
                                                     <td style="color: rgb(255,255,255);">${book.price}</td>
                                                     <td style="color: rgb(255,255,255);">${book.stock}</td>
                                                     <td class="text-center align-middle" style="max-height: 60px;height: 60px;">
-                                                        <a class="btn btnMaterial btn-flat primary semicircle" role="button" href="manager/bookServlet?action=info&ISBN=${book.ISBN}" style="color: #00bdff;"><i class="far fa-eye"></i></a>
+                                                        <a  class="btn btnMaterial btn-flat primary semicircle" role="button" href="manager/bookServlet?action=info&ISBN=${book.ISBN}" style="color: #00bdff;"><i class="far fa-eye"></i></a>
                                                         <a class="btn btnMaterial btn-flat success semicircle" role="button" href="manager/bookServlet?action=getBook&id=${book.id}" style="color: rgb(0,197,179);"><i class="fas fa-pen"></i></a>
-                                                        <a class="btn btnMaterial btn-flat accent btnNoBorders checkboxHover" role="button" style="margin-left: 5px;" data-bs-toggle="modal" data-bs-target="#delete-modal" id="deleteClass" href="manager/bookServlet?action=delete&id=${book.id}"><i class="fas fa-trash btnNoBorders" style="color: #DC3545;"></i></a></td>
+                                                        <a  id="deleteClass"  class="btn btnMaterial btn-flat accent btnNoBorders checkboxHover" role="button" style="margin-left: 5px;" data-bs-toggle="modal" data-bs-target="#delete-modal"  href="manager/bookServlet?action=delete&id=${book.id}"><i class="fas fa-trash btnNoBorders" style="color: #DC3545;"></i></a></td>
                                                 </tr>
                                             </c:forEach>
                                         </tbody>
@@ -133,60 +135,6 @@
                                         <li class="page-item"><a class="page-link" aria-label="Next" href="${ requestScope.page.url }&pageNo=${requestScope.page.pageNo+1}"><span aria-hidden="true">下页</span></a></li>
                                     </c:if>
                                     <li class="page-item"><a class="page-link" aria-label="Next" href="${ requestScope.page.url }&pageNo=${requestScope.page.pageTotal}"><span aria-hidden="true">末页</span></a></li>
-
-
-                                    <%--                                    共${ requestScope.page.pageTotal }页，${ requestScope.page.pageTotalCount }条记录--%>
-<%--                                    到第<input value="${param.pageNo}" name="pn" id="pn_input"/>页--%>
-<%--                                    <input id="searchPageBtn" type="button" value="确定">--%>
-
-<%--                                    <script type="text/javascript">--%>
-
-<%--                                        $(function () {--%>
-<%--                                            // 跳到指定的页码--%>
-<%--                                            $("#searchPageBtn").click(function () {--%>
-
-<%--                                                var pageNo = $("#pn_input").val();--%>
-
-<%--                                                &lt;%&ndash;var pageTotal = ${requestScope.page.pageTotal};&ndash;%&gt;--%>
-<%--                                                &lt;%&ndash;alert(pageTotal);&ndash;%&gt;--%>
-
-<%--                                                // javaScript语言中提供了一个location地址栏对象--%>
-<%--                                                // 它有一个属性叫href.它可以获取浏览器地址栏中的地址--%>
-<%--                                                // href属性可读，可写--%>
-<%--                                                location.href = "${pageScope.basePath}${ requestScope.page.url }&pageNo=" + pageNo;--%>
-
-<%--                                            });--%>
-<%--                                        });--%>
-
-<%--                                    </script>--%>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%--                                <li class="page-item"><a class="page-link" aria-label="Previous" href="manager/bookServlet?action=page&pageNo=${requestScope.page.pageNo-1}"><span aria-hidden="true">«</span></a></li>--%>
-<%--                                <li class="page-item"><a class="page-link" href="manager/bookServlet?action=page&pageNo=1">1</a></li>--%>
-<%--                                <li class="page-item"><a class="page-link" href="#">2</a></li>--%>
-<%--                                <li class="page-item"><a class="page-link" href="#">3</a></li>--%>
-<%--                                <li class="page-item"><a class="page-link" href="#">4</a></li>--%>
-<%--                                <li class="page-item"><a class="page-link" href="#">5</a></li>--%>
-<%--                                <li class="page-item"><a class="page-link" aria-label="Next" href="#"><span aria-hidden="true">»</span></a></li>--%>
-
                             </ul>
                         </nav>
                     </div>

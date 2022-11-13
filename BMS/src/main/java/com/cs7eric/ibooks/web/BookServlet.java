@@ -30,12 +30,16 @@ public class BookServlet extends BaseServlet{
     }
 
     protected void add(HttpServletRequest request, HttpServletResponse response){
+
+        int pageNo = WebUtils.parseInt(request.getParameter("pageNo"), 0);
+        pageNo+=1;
+
         //获取请求参数 ---封装成为 Book 对象
         Book book = WebUtils.copyParamToBean(request.getParameterMap(), new Book());
         //调用 BookService.addBook
         bookService.addBook(book);
         try {
-            response.sendRedirect(request.getContextPath() + "/manager/bookServlet?action=page");
+            response.sendRedirect(request.getContextPath() + "/manager/bookServlet?action=page&pageNo=" + pageNo);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -70,8 +74,10 @@ public class BookServlet extends BaseServlet{
         Book book = WebUtils.copyParamToBean(request.getParameterMap(), new Book());
         //调用 bookService.updateBook()修改图书
         bookService.updateBook(book);
+
+
         //重定向回图书管理页面
-        response.sendRedirect(request.getContextPath() + "/manager/bookServlet?action=page");
+        response.sendRedirect(request.getContextPath() + "/manager/bookServlet?action=page&pageNo" + request.getParameter("pageNo"));
     }
 
     protected void page(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
