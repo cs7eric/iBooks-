@@ -24,9 +24,9 @@ public class BookServlet extends BaseServlet{
         List<Book> bookList = bookService.queryBooks();
         //将全部图书保存到 request 域 中
         request.setAttribute("bookList",bookList);
-        //请求转发到 /pages/manager/book_manager.jsp 页面
-        request.getRequestDispatcher( "/pages/manager/book_manager.jsp").forward(request,response);
-//        response.sendRedirect(request.getContextPath() + "/pages/manager/book_manager.jsp");
+        //请求转发到 /pages/manager/book_manager_new.jsp 页面
+        request.getRequestDispatcher( "/pages/manager/book_manager_new.jsp").forward(request,response);
+//        response.sendRedirect(request.getContextPath() + "/pages/manager/book_manager_new.jsp");
     }
 
     protected void add(HttpServletRequest request, HttpServletResponse response){
@@ -92,7 +92,7 @@ public class BookServlet extends BaseServlet{
 
         //保存 Page 对象到 Request 域中
         request.setAttribute("page",page);
-        //请求转发到 /pages/manager/book_manager.jsp 页面
+        //请求转发到 /pages/manager/book_manager_new.jsp 页面
         request.getRequestDispatcher( "/pages/manager/book_manager_new.jsp").forward(request,response);
     }
 
@@ -153,7 +153,7 @@ public class BookServlet extends BaseServlet{
 
         //保存 Page 对象到 Request 域中
         request.setAttribute("pageByPrice",pageByPrice);
-        //请求转发到 /pages/manager/book_manager.jsp 页面
+        //请求转发到 /pages/manager/book_manager_new.jsp 页面
         request.getRequestDispatcher( "/pages/manager/book_sortbyprice.jsp").forward(request,response);
     }
 }
