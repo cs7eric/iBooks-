@@ -61,4 +61,10 @@ public class BookDAOImpl extends BaseDAO implements BookDAO {
         String sql = "select `id` , `ISBN`, `name` , `author` , `price` , `stock` , `img_path` imgPath , `intro` from t_book order by rand () limit ?";
         return queryForList(Book.class,sql,pageSize);
     }
+
+    @Override
+    public List<Book> queryForListByPrice(int begin, int pageSize) {
+        String sql = "select `id` , `ISBN`, `name` , `author` , `price` , `stock` , `img_path` imgPath , `intro` from t_book order by price limit ?,?";
+        return queryForList(Book.class,sql,begin,pageSize);
+    }
 }

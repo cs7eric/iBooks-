@@ -102,7 +102,7 @@
                             </li>
                             <li>
                                 <!-- 联系我们 -->
-                                <a href="javascript:;">联系我们</a>
+                                <a href="javascript:">联系我们</a>
                             </li>
 
                         </ul>

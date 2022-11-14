@@ -140,4 +140,20 @@ public class BookServlet extends BaseServlet{
 
         request.getRequestDispatcher("/pages/manager/book_briefIntro.jsp").forward(request,response);
     }
+
+    protected void pageByPrice(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        //获取请求参数  pageNo 和 pageSize
+        int pageNo = WebUtils.parseInt(request.getParameter("pageNo"), 1);
+        int pageSize = WebUtils.parseInt(request.getParameter("pageSize"), Page.PAGE_SIZE);
+
+        //调用 BookService.page(pageNo,pageSize) :Page 对象
+        Page<Book> pageByPrice = bookService.pageByPrice(pageNo, pageSize);
+
+        pageByPrice.setUrl("manager/bookServlet?action=pageByPrice");
+
+        //保存 Page 对象到 Request 域中
+        request.setAttribute("pageByPrice",pageByPrice);
+        //请求转发到 /pages/manager/book_manager.jsp 页面
+        request.getRequestDispatcher( "/pages/manager/book_sortbyprice.jsp").forward(request,response);
+    }
 }
