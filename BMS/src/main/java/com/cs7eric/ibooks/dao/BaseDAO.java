@@ -25,10 +25,8 @@ public class BaseDAO {
             return queryRinner.update(conn,sql,params);
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally{
-            JDBCUtils.close(conn);
+            throw new RuntimeException(e);
         }
-        return -1;
     }
 
     /**
@@ -45,10 +43,8 @@ public class BaseDAO {
             return queryRinner.query(conn,sql,new BeanHandler<T>(type),params);
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            JDBCUtils.close(conn);
+            throw new RuntimeException(e);
         }
-        return null;
     }
 
 
@@ -66,10 +62,8 @@ public class BaseDAO {
             return queryRinner.query(conn,sql,new BeanListHandler<T>(type),params);
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            JDBCUtils.close(conn);
+            throw new RuntimeException(e);
         }
-        return null;
     }
 
     /**
@@ -84,9 +78,7 @@ public class BaseDAO {
             return queryRinner.query(conn, sql, new ScalarHandler(), params);
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally {
-            JDBCUtils.close(conn);
+            throw new RuntimeException(e);
         }
-        return null;
     }
 }

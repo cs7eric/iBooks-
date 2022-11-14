@@ -13,6 +13,8 @@ public class BaseServlet extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
+
         String action = request.getParameter("action");
 
         try {
@@ -20,6 +22,7 @@ public class BaseServlet extends HttpServlet {
             method.invoke(this,request,response);
         } catch (Exception e) {
             e.printStackTrace();
+            throw new RuntimeException(e);
         }
 
     }
