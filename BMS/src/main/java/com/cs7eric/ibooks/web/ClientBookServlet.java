@@ -13,6 +13,4 @@ public class ClientBookServlet extends BaseServlet {
         request.setAttribute("isIndex",isIndex);
         request.getRequestDispatcher("/pages/client/index.jsp").forward(request,response);
     }
-
-
 }
