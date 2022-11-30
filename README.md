@@ -1,3 +1,11 @@
+![logoS](https://cs7eric-image.oss-cn-hangzhou.aliyuncs.com/images/logoS.png)
+
+**iBooks 图书管理系统**
+
+
+
+
+
 # 设计要求
 
 ## 问题描述
