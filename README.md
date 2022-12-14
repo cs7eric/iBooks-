@@ -6,6 +6,69 @@
 
 
 
+# 用户使用手册
+
+## 快速启动
+
+1. 运行 sql 建表语句
+2. 添加相关依赖
+3. 更改 druid.properties 配置文件
+
+ 
+
+## 软件概述
+
+ 
+
+### **技术栈**
+
+#### **前端**
+
+- HTML
+- CSS
+- JavaScript
+- jQuery 1.7.2
+- Core-js 3.20.3
+- Bootstrap 5.2
+- JSP
+
+ 
+
+#### **后端**
+
+- Apache Tomcat
+- Servlet
+- Filter
+- MySQL 8.0.x
+- JDBC
+- Google kaptcha
+
+ 
+
+#### **构建工具**
+
+- maven 3.8.1
+
+ 
+
+ 
+
+#### 主要依赖库
+
+- commons-beanutils-1.8.0
+- commons-dbutils-1.3
+- common-logging-1.1.1
+- dom4j-1.6.1
+- druid-1.1.10
+- hamcrest-core-1.3
+- junit-4.12
+- kaptcha-2.3.2
+- mysql-connector-java-8.0.30
+- taglibs-standard-impl-1.2.1
+- taglibs-standard-spec-1.2.1
+
+
+
 # 设计要求
 
 ## 问题描述
@@ -76,9 +139,7 @@ IDEA 2021.3.1
 
 ### **User - 管理员**
 
-### **书籍类** 
-
-![img](https://cs7eric-image.oss-cn-hangzhou.aliyuncs.com/images/wps3.jpg)![img](https://cs7eric-image.oss-cn-hangzhou.aliyuncs.com/images/wps4.jpg)![img](https://cs7eric-image.oss-cn-hangzhou.aliyuncs.com/images/wps5.jpg) 
+### **书籍类**  
 
  
 
@@ -278,70 +339,7 @@ filters=wall
 
 # 用户使用手册
 
-## 引言
 
- 
-
-## 快速启动
-
-1. 运行 sql 建表语句
-2. 添加相关依赖
-3. 更改 druid.properties 配置文件
-
- 
-
-## 软件概述
-
- 
-
-### **技术栈**
-
-#### **前端**
-
-- HTML
-- CSS
-- JavaScript
-- jQuery 1.7.2
-- Core-js 3.20.3
-- Bootstrap 5.2
-- JSP
-
- 
-
-#### **后端**
-
-- Apache Tomcat
-- Servlet
-- Filter
-- MySQL 8.0.x
-- JDBC
-- Google kaptcha
-
- 
-
-#### **构建工具**
-
-- maven 3.8.1
-
- 
-
- 
-
-#### 主要依赖库
-
-- commons-beanutils-1.8.0
-- commons-dbutils-1.3
-- common-logging-1.1.1
-- dom4j-1.6.1
-- druid-1.1.10
-- hamcrest-core-1.3
-- junit-4.12
-- kaptcha-2.3.2
-- mysql-connector-java-8.0.30
-- taglibs-standard-impl-1.2.1
-- taglibs-standard-spec-1.2.1
-
- 
 
 ## 使用说明
 

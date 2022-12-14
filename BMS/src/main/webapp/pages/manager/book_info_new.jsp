@@ -38,10 +38,12 @@
                     </span>
                 </div>
             </div>
-            <div class="content_left">
-                <!-- 修改图书 -->
-                <a href="manager/bookServlet?action=getBook&id=${requestScope.bookInfo.id}">修改图书</a>
-            </div>
+            <c:if test="${ not empty sessionScope.user}">
+                <div class="content_left">
+                    <!-- 修改图书 -->
+                    <a href="manager/bookServlet?action=getBook&id=${requestScope.bookInfo.id}">修改图书</a>
+                </div>
+            </c:if>
         </div>
         <div style="height:20px;"></div>
         <div class="main">

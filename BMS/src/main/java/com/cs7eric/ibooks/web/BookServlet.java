@@ -68,7 +68,7 @@ public class BookServlet extends BaseServlet{
 
     }
 
-    protected void update(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    protected void update(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
         //获取参数  封装成为 Book 对象
         Book book = WebUtils.copyParamToBean(request.getParameterMap(), new Book());
@@ -77,7 +77,7 @@ public class BookServlet extends BaseServlet{
 
 
         //重定向回图书管理页面
-        response.sendRedirect(request.getContextPath() + "/manager/bookServlet?action=page&pageNo" + request.getParameter("pageNo"));
+        response.sendRedirect(request.getContextPath() + "/manager/bookServlet?action=info&ISBN=" + request.getParameter("ISBN"));
     }
 
     protected void page(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
